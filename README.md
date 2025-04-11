@@ -57,3 +57,10 @@ Open any browser with URL: http://127.0.0.1:8000
 php artisan serve
 ```
 
+
+
+_Note:_ For email verification can use ID of user with this route
+
+```bash
+http://127.0.0.1:8000/verify-email/{id}
+```

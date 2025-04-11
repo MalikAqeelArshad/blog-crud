@@ -21,10 +21,11 @@ composer install
 
 
 ### Database Credentials
-
 ```bash
 cp .env.example .env
+```
 
+```bash
 APP_URL=http://127.0.0.1:8000
 
 DB_CONNECTION=sqlite

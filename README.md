@@ -7,9 +7,9 @@ This is the CRUD task of blogs developed by Aqeel Malik.
 This CRUD project uses Laravel for backend and React for the frontend.
 
 ### Install Dependencies
-```bash
+
 Node v22 and PHP 8.4.5 
-```
+
 
 ```bash
 npm install

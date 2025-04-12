@@ -1,7 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import AppLayout from '@/layouts/app-layout';
-import { Head, useForm } from '@inertiajs/react';
+import { Head, Link, useForm } from '@inertiajs/react';
 import { Heart } from 'lucide-react';
 import { useState } from 'react';
 
@@ -99,12 +99,12 @@ export default function Index({ blogs, filters, auth }: IndexProps) {
                     <Button onClick={handleSearch} className="w-full sm:w-auto">
                         Search
                     </Button>
-                    <a
+                    <Link
                         href={route('blogs.create')}
                         className="w-full shrink-0 rounded bg-blue-600 px-3 py-1 text-center text-white hover:bg-blue-700 sm:mt-0 sm:w-auto"
                     >
                         Create Blog
-                    </a>
+                    </Link>
                 </div>
 
                 <div className="grid gap-6">
@@ -124,9 +124,9 @@ export default function Index({ blogs, filters, auth }: IndexProps) {
 
                             {blog.user_id === auth.user.id && (
                                 <div className="mt-4 flex space-x-4">
-                                    <a href={route('blogs.edit', blog.id)} className="text-blue-600 hover:underline">
+                                    <Link href={route('blogs.edit', blog.id)} className="text-blue-600 hover:underline">
                                         Edit
-                                    </a>
+                                    </Link>
                                     <button
                                         onClick={() => confirm('Are you sure?') && destroy(route('blogs.destroy', blog.id))}
                                         className="text-red-600 hover:underline"

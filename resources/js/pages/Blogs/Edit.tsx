@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import AppLayout from '@/layouts/app-layout';
-import { Head, useForm } from '@inertiajs/react';
+import { Head, Link, useForm } from '@inertiajs/react';
 import { ArrowLeft } from 'lucide-react';
 
 interface Blog {
@@ -67,9 +67,9 @@ export default function Edit({ blog }: EditProps) {
             <div className="max-w-7xl p-6">
                 <form onSubmit={submit} className="mx-auto max-w-xl rounded-2xl border p-7">
                     <h1 className="flex items-center gap-1 text-3xl font-bold">
-                        <a href="/blogs">
+                        <Link href="/blogs">
                             <ArrowLeft />
-                        </a>
+                        </Link>
                         <span className="ml-2">Edit Blog</span>
                     </h1>
                     <div className="max-auto mt-6">
